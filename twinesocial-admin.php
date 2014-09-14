@@ -180,7 +180,7 @@ function twinesocial_settings_page() {
 <?php  }
 
 
-if ( isset($_POST['action']) && $_POST['action'] == 'update' && wp_verify_nonce( $_POST['twinesocial_noncename'], plugin_basename( __FILE__ ) ) ) {
+if ( isset($_POST['action']) && $_POST['action'] == 'update' && isset($_POST['twinesocial_noncename']) && wp_verify_nonce( $_POST['twinesocial_noncename'], plugin_basename( __FILE__ ) ) ) {
 
 
 	update_option('twinesocial_accountid', $_POST['accountid'] );
